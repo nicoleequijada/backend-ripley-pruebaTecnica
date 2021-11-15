@@ -2,11 +2,10 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const db = require('./db');
-const cors = require('cors')
-const sharks = require('./routes/sharks');
+const cors = require('cors');
+
 const apiRouter = require('./routes/api');
 
-const path = __dirname + '/views/';
 const port = process.env.PORT || 8080;
 
 app.engine('html', require('ejs').renderFile);
