@@ -12,3 +12,13 @@ exports.newTransfer = function (req, res){
         }
       })
 }
+
+exports.getTransfer = function (req, res){
+  Transfer.find({}).exec(function(error, transfers){
+    if(error){
+      return res.send(500, err);
+    }else{
+      res.send(200, transfers)
+    }
+  })
+}

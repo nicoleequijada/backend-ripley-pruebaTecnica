@@ -16,6 +16,9 @@ client.getClients(req,res);
 router.post('/transfers', function(req, res){
   transfer.newTransfer(req, res)
 })
+router.get('/transfers', function(req, res){
+  transfer.getTransfer(req, res)
+})
 
 module.exports = router;
  
